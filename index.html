@@ -1,155 +1,135 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tondeuse Solaire Autonome</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accueil – Tondeuse Solaire</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #f5f5f5;
       scroll-behavior: smooth;
+      animation: fadeInBody 1s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #333;
-      padding: 15px 20px;
+      background-color: #222;
+      padding: 15px 30px;
       color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       z-index: 1000;
     }
 
     nav a {
       color: white;
-      margin-right: 20px;
+      margin-left: 20px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #52b788;
     }
 
     .banniere {
       width: 100%;
       height: 300px;
-      background-image: url('Images/banniere.png');
+      background-image: url("Images/banniere.png");
       background-size: cover;
       background-position: center;
       margin-top: 60px;
+      animation: slideIn 1s ease-in-out;
     }
 
-    section {
-      padding: 60px 20px;
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    main {
+      padding: 40px 20px;
       text-align: center;
     }
 
-    h1, h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      animation: fadeIn 1s ease-out;
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     p {
-      font-size: 1.1em;
-      color: #333;
+      font-size: 1.2em;
       max-width: 800px;
-      margin: auto;
-      margin-bottom: 20px;
+      margin: 0 auto 30px auto;
+      animation: fadeIn 1.5s ease;
     }
 
     .cta {
-      background-color: #3b9c3f;
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #40916c;
       color: white;
-      padding: 12px 24px;
       font-size: 1.1em;
-      text-decoration: none;
       border-radius: 8px;
+      text-decoration: none;
       transition: background-color 0.3s ease;
+      animation: fadeIn 1.7s ease;
     }
 
     .cta:hover {
-      background-color: #2f7d32;
+      background-color: #2d6a4f;
     }
 
-    .faq {
-      text-align: left;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .faq h3 {
-      color: #3b9c3f;
-      margin-top: 20px;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
+    .produit-image {
+      width: 300px;
       margin-top: 40px;
+      animation: zoomIn 1.3s ease;
     }
 
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
-
 <body>
   <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#produit">Produit</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-    <a href="#achat">Acheter</a>
+    <div><strong>Tondeuse Solaire</strong></div>
+    <div>
+      <a href="index.html">Accueil</a>
+      <a href="produit.html">Produit</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="acheter.html">Acheter</a>
+    </div>
   </nav>
 
   <div class="banniere"></div>
 
-  <section id="accueil">
+  <main>
     <h1>Bienvenue sur notre site</h1>
-    <p>Découvrez la tondeuse solaire autonome qui révolutionne l’entretien des pelouses au Québec. Conçue pour être écologique, performante et entièrement autonome.</p>
-    <a href="#achat" class="cta">Commander maintenant</a>
-  </section>
-
-  <section id="produit">
-    <h2>Notre produit</h2>
-    <p>Notre tondeuse solaire autonome utilise l’énergie du soleil pour fonctionner sans carburant ni câble. Elle est dotée d’un GPS intégré, de capteurs de sécurité, et fonctionne de manière entièrement automatisée.</p>
-    <p>Design robuste, silencieux, parfait pour les grands terrains résidentiels.</p>
-  </section>
-
-  <section id="faq">
-    <h2>Foire aux questions</h2>
-    <div class="faq">
-      <h3>🟢 Est-ce que la tondeuse fonctionne la nuit ?</h3>
-      <p>Elle se recharge le jour, mais peut fonctionner le soir tant que la batterie est suffisante.</p>
-
-      <h3>🟢 Peut-elle tondre sous la pluie ?</h3>
-      <p>Oui, elle est résistante aux intempéries. Toutefois, pour une performance optimale, il est recommandé d’éviter les fortes pluies.</p>
-
-      <h3>🟢 Est-ce qu’elle fonctionne en hiver ?</h3>
-      <p>Non, elle est conçue pour être utilisée du printemps à l’automne. Elle doit être entreposée l’hiver.</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Service client</h2>
-    <p>Besoin d’aide ou de plus d’infos ? Notre équipe est disponible 7j/7.</p>
-    <p><strong>📞 Téléphone :</strong> 1-800-123-4567</p>
-    <p><strong>📧 Courriel :</strong> support@tondeusesolaire.ca</p>
-  </section>
-
-  <section id="achat">
-    <h2>Commander maintenant</h2>
-    <p>Prix de lancement : <strong>1 995 $ CAD</strong></p>
-    <a href="#" class="cta">Ajouter au panier</a>
-  </section>
-
-  <footer>
-    &copy; 2025 Tondeuse Solaire Autonome. Tous droits réservés.
-  </footer>
+    <p>La tondeuse solaire autonome révolutionne l’entretien paysager au Québec. Silencieuse, écoénergétique et complètement automatisée.</p>
+    <a class="cta" href="acheter.html">Commander maintenant</a>
+    <br>
+    <img src="Images/tondeuse.png" alt="Image du produit" class="produit-image" />
+  </main>
 </body>
 </html>
-
