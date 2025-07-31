@@ -1,56 +1,105 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tondeuse Solaire - Accueil</title>
-<style>
-  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; color:#333; }
-  header { background:#2a7a2a; padding:20px; color:white; }
-  nav a { color: white; margin-right: 20px; text-decoration:none; font-weight: bold; }
-  nav a:hover { text-decoration: underline; }
-  .banner {
-    background: url('https://via.placeholder.com/1200x300?text=Banni%C3%A8re+Produit') no-repeat center/cover;
-    height: 200px;
-  }
-  main { max-width: 900px; margin: 40px auto; background: white; padding: 20px; border-radius: 8px; }
-  .product-image {
-    width: 100%; max-width: 400px; display: block; margin: 20px auto;
-  }
-  footer { text-align: center; padding: 15px; background: #ddd; margin-top: 40px; }
-  h1, h2 { color: #2a7a2a; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tondeuse Solaire Autonome</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 15px 20px;
+      color: white;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .banniere {
+      width: 100%;
+      height: 300px;
+      background-image: url('images/banniere.png');
+      background-size: cover;
+      background-position: center;
+      margin-top: 60px;
+    }
+
+    #accueil {
+      padding: 60px 20px 40px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      animation: slideIn 1s ease-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+      margin-bottom: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta {
+      background-color: #3b9c3f;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #2f7d32;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideIn {
+      from {transform: translateY(-20px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+  </style>
 </head>
+
 <body>
-<img src="Images/banniere.png" alt="Bannière tondeuse solaire" style="width: 100%; height: auto; display: block;">
-
-<header>
   <nav>
-    <a href="index.html">Accueil</a>
-    <a href="service-client.html">Service client</a>
-    <a href="faq.html">FAQ</a>
-    <a href="acheter.html">Acheter</a>
+    <a href="#accueil">Accueil</a>
+    <a href="#produit">Produit</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="#achat">Acheter</a>
   </nav>
-</header>
 
-<div class="banner" role="img" aria-label="Bannière du produit"></div>
+  <div class="banniere"></div>
 
-<main>
-  <h1>Bienvenue sur le site officiel de la Tondeuse Solaire</h1>
-  <p>Découvrez notre tondeuse autonome, écologique et silencieuse, conçue pour faciliter votre entretien extérieur tout en respectant l’environnement.</p>
-  <img <img src="Images/produit.jpg" alt="Photo de la tondeuse" />
-  <h2>Caractéristiques principales :</h2>
-  <ul>
-    <li>Fonctionnement 100% solaire avec batterie intégrée</li>
-    <li>Autonomie jusqu’à 8 heures par charge</li>
-    <li>Capteurs intelligents pour éviter obstacles et sécurité enfants</li>
-    <li>Silencieuse et sans émissions de CO₂</li>
-  </ul>
-</main>
-
-<footer>
-  &copy; 2025 Nathan - Tondeuse Solaire. Tous droits réservés.
-</footer>
-
+  <section id="accueil">
+    <h1>Bienvenue sur notre site</h1>
+    <p>Découvrez la tondeuse solaire autonome qui révolutionne l’entretien des pelouses au Québec. Conçue pour être écologique, performante et entièrement autonome.</p>
+    <a href="#achat" class="cta">Commander maintenant</a>
+  </section>
 </body>
 </html>
+
