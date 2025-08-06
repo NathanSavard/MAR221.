@@ -4,113 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Accueil – Tondeuse Solaire</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
-      scroll-behavior: smooth;
-      animation: fadeInBody 1s ease-in;
-    }
-
-    @keyframes fadeInBody {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #222;
-      padding: 15px 30px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #52b788;
-    }
-
-    .banniere {
-      width: 100%;
-      height: 300px;
-      background-image: url("Images/banniere.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: #e0e0e0;
-      margin-top: 60px;
-      animation: slideIn 1s ease-in-out;
-    }
-
-    @keyframes slideIn {
-      from { transform: translateY(-20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    main {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
-      animation: fadeInDown 1s ease;
-    }
-
-    @keyframes fadeInDown {
-      from { transform: translateY(-30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    p {
-      font-size: 1.2em;
-      max-width: 800px;
-      margin: 0 auto 30px auto;
-      animation: fadeIn 1.5s ease;
-    }
-
-    .cta {
-      display: inline-block;
-      padding: 12px 30px;
-      background-color: #40916c;
-      color: white;
-      font-size: 1.1em;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      animation: fadeIn 1.7s ease;
-    }
-
-    .cta:hover {
-      background-color: #2d6a4f;
-    }
-
-    .produit-image {
-      width: 300px;
-      margin-top: 40px;
-      animation: zoomIn 1.3s ease;
-    }
-
-    @keyframes zoomIn {
-      from { transform: scale(0.9); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <nav>
@@ -134,3 +28,4 @@
   </main>
 </body>
 </html>
+
